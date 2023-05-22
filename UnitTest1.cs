@@ -12,7 +12,7 @@ namespace APITesting
     {
         [Test]
         [TestCase( "200")]
-        public async Task APIGetDashboardByNameAsync( string expectedStatusCode)
+        public async Task APIGetUsersAsync( string expectedStatusCode)
         {
           
         
@@ -20,6 +20,6 @@ namespace APITesting
             RestResponse response = await ExecuteRequest("Get", "users");
             //assert
             Assert.AreEqual(expectedStatusCode, ((int)response.StatusCode).ToString(), $"Status Code is not the Expected, Actual:{(int)response.StatusCode}");
-                 }
+              }
     }
 }
